@@ -25,6 +25,16 @@ public class Projext2 {
 
         return SumAB;
     }
+         public static int[][] SUBTAB(int[][] A, int[][] B) {
+        int[][] SUBTAB = new int[A.length][A[0].length];
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[0].length; j++) {
+                SUBTAB[i][j] = A[i][j] - B[i][j];
+            } 
+        }
+
+        return SUBTAB;
+    }
         
        public static int[][] Transpose(int[][] M) {
         int[][] transposeM = new int[M[0].length][M.length];
