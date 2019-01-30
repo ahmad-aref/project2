@@ -66,5 +66,35 @@ public class Projext2 {
         
         return transposeM;
     }
+       
+           public static int DET(int[][] A) {
+        int test[][];
+        int Result = 0;
+
+        if (A.length == 1) {
+            Result = A[0][0];
+            return Result;
+        }
+        if (A.length == 2) {
+            Result = ((A[0][0] * A[1][1]) - (A[0][1] * A[1][0]));
+            return Result;
+        }
+        for (int i = 0; i < A[0].length; i++) {
+            test = new int[A.length - 1][A[0].length - 1];
+
+            for (int j = 1; j < A.length; j++) {
+                for (int k = 0; k < A[0].length; k++) {
+                    if (k < i) {
+                        test[j - 1][k] = A[j][k];
+                    } else if (k > i) {
+                        test[j - 1][k - 1] = A[j][k];
+                    }
+                }
+            }
+
+            Result += A[0][i] * Math.pow (-1, i) * DET(test);
+        }
+        return Result;
+    }
     
 }
