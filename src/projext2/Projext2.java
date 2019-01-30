@@ -34,6 +34,38 @@ public class Projext2 {
                         B[i][j] = input.nextInt();
                     }
                 }
+                int Q = input.nextInt();
+               for (int i = 0; i < Q; i++) {
+                  if (i == 0) {
+                      //just 1
+                        String str1 = input.nextLine();
+                    }
+                  //queries 
+                  String str = input.nextLine();
+                  file_output.println(str);
+                  int[][] result = A;
+                  
+                  //chose the right method
+                            switch (str) {
+                            case "SUM A B"     : result = SumAB(A, B);break; 
+                            case "SUBT A B"    : result = SUBTAB(A, B);break; 
+                            case "SUBT B A"    : result = SUBTAB(B, A);break; 
+                            case "MUL A B"     : result = MUL(A, B);break;
+                            case "MUL B A"     : result = MUL(B, A);break;
+                            case "Transpose A" : result = Transpose(A);break;
+                            case "Transpose B" : result = Transpose(B);break;
+                            case "Det A"       : file_output.println(DET(A));continue; 
+                            // Because the answer is number and is not the matrix is printing directly
+                            case "Det B"       : file_output.println(DET(B));continue; 
+                            // Because the answer is number and is not the matrix is printing directly
+                    }
+                        // print result and format it    
+                    for (int n = 0; n < result.length; n++) {
+                        for (int j = 0; j < result[0].length; j++) {
+                            file_output.printf("%-6d",result[n][j]);
+                        }
+                    }
+                  }
                 
             }
                 }
