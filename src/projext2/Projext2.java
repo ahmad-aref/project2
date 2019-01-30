@@ -13,6 +13,7 @@ public class Projext2 {
         File file = new File("input.txt");
         PrintWriter file_output = new PrintWriter("output.txt");
         Scanner input = new Scanner(file);
+        //check
     }
         
         // method use to sum two Arrays we pass the array A and B then return array of sum namde SumAB
