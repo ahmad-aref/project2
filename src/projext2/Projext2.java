@@ -15,6 +15,20 @@ public class Projext2 {
         Scanner input = new Scanner(file);
         
     }
+        public static int[][] MUL(int[][] A , int[][] B){
+        int[][] MULAB = new int[A.length][B[0].length];
+        int sum = 0;
+        for(int i = 0 ; i < A.length ; i++){
+            for (int j = 0; j < B[0].length; j++) {
+                for (int n = 0 ; n < B.length ; n++){
+                   sum += A[i][n] * B[n][j];  
+                }
+                MULAB[i][j] = sum;
+                sum = 0;
+            }
+        }
+        return MULAB;
+    }
         
         // method use to sum two Arrays we pass the array A and B then return array of sum namde SumAB
         public static int[][] SumAB(int[][] A, int[][] B) {
