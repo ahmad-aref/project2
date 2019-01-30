@@ -11,6 +11,24 @@ public class Projext2 {
         File file = new File("input.txt");
         PrintWriter file_output = new PrintWriter("output.txt");
         Scanner input = new Scanner(file);
+        
+                while (input.hasNextInt()) {
+            int t = input.nextInt();
+            for (int cases = 0; cases < t; cases++) {
+                file_output.println("Case#"+ (cases + 1)+ ":");   
+                int N = input.nextInt();
+                int M = input.nextInt();
+                int[][] A = new int[N][M];
+                for (int i = 0; i < N; i++) {
+                    for (int j = 0; j < M; j++) {
+                        A[i][j] = input.nextInt();
+                    }
+                }
+                
+            }
+                }
+                
+                file_output.close();
 
     }
 
