@@ -25,6 +25,16 @@ public class Projext2 {
                     }
                 }
                 
+                  
+                N = input.nextInt();
+                M = input.nextInt();
+                int[][] B = new int[N][M];
+                for (int i = 0; i < N; i++) {
+                    for (int j = 0; j < M; j++) {
+                        B[i][j] = input.nextInt();
+                    }
+                }
+                
             }
                 }
                 
