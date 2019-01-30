@@ -65,6 +65,9 @@ public class Projext2 {
                             file_output.printf("%-6d",result[n][j]);
                         }
                     }
+                           if(cases != t - 1){
+                        file_output.println("");
+                           }
                   }
                 
             }
